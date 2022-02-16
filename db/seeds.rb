@@ -10,17 +10,18 @@ User.destroy_all
 Score.destroy_all
 
 puts "Creating User seed data..."
-User.create ({username: "mouse",email: "mouse@email.com",password: "1234"})
-User.create ({username: "cat",email: "cat@email.com",password: "1234"})
-User.create ({username: "dog",email: "dog@email.com",password: "1234"})
-User.create ({username: "bird",email: "bird@email.com",password: "1234"})
-User.create ({username: "fish",email: "fish@email.com",password: "1234"})
-User.create ({username: "cow",email: "cow@email.com",password: "1234"})
-User.create ({username: "deer",email: "deer@email.com",password: "1234"})
+User.create ({name: "mouse",email: "mouse@email.com",password: "1234"})
+User.create ({name: "cat",email: "cat@email.com",password: "1234"})
+User.create ({name: "dog",email: "dog@email.com",password: "1234"})
+User.create ({name: "bird",email: "bird@email.com",password: "1234"})
+User.create ({name: "fish",email: "fish@email.com",password: "1234"})
+User.create ({name: "cow",email: "cow@email.com",password: "1234"})
+User.create ({name: "deer",email: "deer@email.com",password: "1234"})
 
 puts "Creating Score seed data..."
 20.times do
     Score.create ({
+        username: Faker::Name.first_name,
         score: Faker::Number.between(from: 100, to: 90000),
         user_id: Faker::Number.between(from: 1, to: 7)
     })

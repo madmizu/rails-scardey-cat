@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2022_02_13_194828) do
   enable_extension "plpgsql"
 
   create_table "scores", force: :cascade do |t|
+    t.string "username"
     t.integer "score"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -24,7 +25,7 @@ ActiveRecord::Schema.define(version: 2022_02_13_194828) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username"
+    t.string "name"
     t.string "email"
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
