@@ -14,6 +14,12 @@ class ScoresController < ApplicationController
         render json: score, status: :ok
     end
 
+    def destroy
+        user = Score.find(params[:id])
+        Score.destroy
+        head :no_content
+    end
+
     private
         def score_params
             params.permit(:score, :name, :user_id)
