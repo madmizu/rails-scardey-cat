@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2022_02_16_065608) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
-    t.index ["user_id"], name: "index_scores_on_user_id"
+    # t.index ["user_id"], name: "index_scores_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
