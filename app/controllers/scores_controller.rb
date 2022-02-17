@@ -16,7 +16,7 @@ class ScoresController < ApplicationController
 
     def destroy
         user = Score.find(params[:id])
-        Score.destroy
+        score.destroy
         head :no_content
     end
 
