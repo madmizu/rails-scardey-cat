@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :users #all routes
-  resources :scores, only:[:index, :create, :show, :destroy]
+  resources :scores
 
   # get '/me', to: "users#show"
   # post '/signup', to: "users#create"
